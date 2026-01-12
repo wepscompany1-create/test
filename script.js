@@ -170,7 +170,7 @@ function requiresCompanyName(customerType) {
 mapboxgl.accessToken = "pk.eyJ1Ijoid2Vwc3BsYXRmb3JtIiwiYSI6ImNtaGhkanRoOTBsbGQyeHNjcjFneWI4ZnAifQ.-0q4O_jD7nObWlel7EzPog";
 
 /* ===== MONDAY AUTH (embedded per your request) ===== */
-const DEFAULT_MONDAY_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjQwMjQ2ODYyMSwiYWFpIjoxMSwidWlkIjoyMDgwODY1NiwiaWFkIjoiMjAyNC0wOC0yN1QxMjo0Mzo1Mi4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6ODQ1ODk5OSwicmduIjoidXNlMSJ9.GKFb4cvL_1PrTO2Eqt576MuE3ejW4RWJk6L_bxzj4FY";
+const DEFAULT_MONDAY_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjU2NjIyMzEyNiwiYWFpIjoxMSwidWlkIjo3Mzg2OTI3NiwiaWFkIjoiMjAyNS0wOS0yNFQxODoyNjoxNi4wMDBaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6ODQ1ODk5OSwicmduIjoidXNlMSJ9.GeSStga5orLvTsrxMsh1VYK5eNldRINHt9kkxNS9bJo";
 const MONDAY_CACHE_KEY = 'wepsMondayCacheV1';
 const MONDAY_CACHE_TTL = 1000 * 60 * 60 * 12; // 12 hours
 
