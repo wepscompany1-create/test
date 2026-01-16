@@ -8283,6 +8283,10 @@ function collectSurveyData() {
   // Question 7: Shipments per year
   data.q7_shipments = document.getElementById('q7_shipments')?.value || '';
 
+  // Question 8: Mobile app preference
+  const q8 = form.querySelector('input[name="q8_mobile_app"]:checked');
+  data.q8_mobile_app = q8 ? q8.value : '';
+
   return data;
 }
 
@@ -8291,15 +8295,16 @@ function validateSurveyForm() {
   const form = document.getElementById('surveyForm');
   const errorDiv = document.getElementById('surveyError');
 
-  // Check required questions (1-5, 7)
+  // Check required questions (1-5, 7, 8)
   const q1 = form.querySelector('input[name="q1_ease"]:checked');
   const q2 = form.querySelector('input[name="q2_info"]:checked');
   const q3 = form.querySelector('input[name="q3_price"]:checked');
   const q4 = form.querySelector('input[name="q4_priority"]:checked');
   const q5 = form.querySelector('input[name="q5_future"]:checked');
   const q7 = document.getElementById('q7_shipments')?.value;
+  const q8 = form.querySelector('input[name="q8_mobile_app"]:checked');
 
-  if (!q1 || !q2 || !q3 || !q4 || !q5 || !q7) {
+  if (!q1 || !q2 || !q3 || !q4 || !q5 || !q7 || !q8) {
     errorDiv.textContent = 'الرجاء الإجابة على جميع الأسئلة المطلوبة (المميزة بـ *)';
     errorDiv.style.display = 'block';
     return false;
@@ -8389,6 +8394,7 @@ async function submitSurveyToMonday(formData, surveyData) {
   if (surveyData.q5_future) columnValues.text_mkyd95pp = surveyData.q5_future;
   if (surveyData.q6_suggestions) columnValues.text_mkydz5gj = surveyData.q6_suggestions;
   if (surveyData.q7_shipments) columnValues.text_mkyd956q = surveyData.q7_shipments;
+  if (surveyData.q8_mobile_app) columnValues.text_mkznmy52 = surveyData.q8_mobile_app;
 
   // Generate FULL report HTML using shared function and add to Monday
   let reportHTML = '';
